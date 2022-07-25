@@ -20,3 +20,16 @@ jobs:
         with:
           browser: chrome
           
+      - name: upload videos
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: Cypress E2E Videos
+          path: cypress/videos
+
+      - name: upload mochawesome-report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Cypress E2E reports
+          path: cypress/reports
