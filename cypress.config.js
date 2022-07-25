@@ -14,14 +14,14 @@ module.exports = defineConfig({
     saveJson: true,
   },
   e2e: {
-    baseUrl: 'http://localhost:4200',
+    // baseUrl: 'http://localhost:4200',
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on)
     },
     env: {
-      mpsandURL: "https://aig-pre-sqa-web.sssiotpfs.com/",
-      cookiesFilePath: "cypress/support/cookies.json"
+      // mpsandURL: "https://aig-pre-sqa-web.sssiotpfs.com/",
+      // cookiesFilePath: "cypress/support/cookies.json"
     },
   },
   requestTimeout: 100000,
